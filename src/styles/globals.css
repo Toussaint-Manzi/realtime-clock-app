@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Readex+Pro:wght@160..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent: #FFBF4B;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  font-family: "Readex Pro", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+    --accent: #FFBF4B;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(
+    circle at center,
+    #57411a 0%,
+    /* rgba(255, 191, 75,0.1) 25%, */
+    rgba(0, 0, 0, 0.95) 70%,
+    var(--background) 100%
+  );
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
