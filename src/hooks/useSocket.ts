@@ -9,20 +9,19 @@ export const useSocket = () => {
   const [error, setError] = useState<string | null>(null);
   const [isConnected, setIsConnected] = useState(false);
 
+  //Web socket connection
   useEffect(() => {
     const ws = new WebSocket(WS_URL);
 
     ws.onopen = () => {
       setIsConnected(true);
       setError(null);
-      console.log('WebSocket Connected');
     };
 
     ws.onmessage = (event) => {
       try {
         const data = JSON.parse(event.data);
         if (data.epochTime) {
-          console.log("epoch time", data.epochTime);
           //Update the state to constantly display the time
           setTime(data.epochTime);
         }
@@ -39,7 +38,6 @@ export const useSocket = () => {
 
     ws.onclose = () => {
       setIsConnected(false);
-      console.log('WebSocket disconnected');
     };
 
     return () => {
