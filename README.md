@@ -31,7 +31,6 @@ next-realtime-clock-app
 │       └── useSocket.ts
 ├── package.json
 ├── tsconfig.json
-├── jest.config.js
 ├── postcss.config
 ├── tailwind.config
 ├── tsconfig.json
@@ -61,10 +60,3 @@ next-realtime-clock-app
 
 - The WebSocket server emits the current time every second.
 - The application displays the current time in real-time on the main page.
-
-## Testing
-
-To run the tests, use the following command:
-```
-yarn test
-```
