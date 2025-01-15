@@ -2,7 +2,7 @@
 
 # Next Realtime Clock App
 
-This project is a Next.js application that displays the local time in real-time using WebSockets.
+This project is a Next.js application with tailwindCss that displays the local time in real-time using WebSockets.
 
 ## App Preview
 
